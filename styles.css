@@ -1,9 +1,7 @@
 
-#main-container {
+.line {
   display: flex;
-  flex-wrap: wrap;
-  width: 350px;
-  margin: auto;
+  justify-content: center;
 }
 
 .square {

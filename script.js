@@ -1,8 +1,14 @@
 const mainContainer = document.querySelector("#main-container")
 
-for(var i = 0; i < 256; i++) {
-  const square = document.createElement("div")
-  square.classList.add("square")
-  square.onmouseover = () => square.classList.add("colored-square");
-  mainContainer.appendChild(square)
+for(let i = 0; i < 16; i++) {
+  const line = document.createElement("div")
+  line.style = "display: flex; justify-content: center"
+  mainContainer.appendChild(line)
+
+  for(let i = 0; i < 16; i++) {
+    const square = document.createElement("div")
+    square.classList.add("square")
+    square.onmouseover = () => square.classList.add("colored-square");
+    line.appendChild(square)
+  }
 }
