@@ -12,11 +12,14 @@ newGridButton.addEventListener("click", () => {
     return alert(`The chosen value is not under 100. Please, try again.`)
   }
 
-  console.log('aaa')
+  const lines = document.querySelectorAll(".line")
+  lines.forEach((line) => line.remove());
+
   let size = 500/squaresPerSide;
 
   for(let i = 0; i < squaresPerSide; i++) {
     const line = document.createElement("div");
+    line.classList.add("line")
     line.style = "display: flex; justify-content: center";
     mainContainer.appendChild(line);
 
