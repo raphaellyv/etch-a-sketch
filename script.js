@@ -1,16 +1,31 @@
-const mainContainer = document.querySelector("#main-container")
-const size = 760/16
+const mainContainer = document.querySelector("#main-container");
+const newGridButton = document.querySelector("#new-grid-button");
 
-for(let i = 0; i < 16; i++) {
-  const line = document.createElement("div")
-  line.style = "display: flex; justify-content: center"
-  mainContainer.appendChild(line)
+newGridButton.addEventListener("click", () => {
+  let squaresPerSide = Number(prompt("Number of squares per side? (max: 100)"));
 
-  for(let i = 0; i < 16; i++) {
-    const square = document.createElement("div")
-    square.classList.add("square")
-    square.style = `height: ${size}px; width: ${size}px`
-    square.onmouseover = () => square.classList.add("colored-square");
-    line.appendChild(square)
+  if (isNaN(squaresPerSide)) {
+    return alert(`The chosen value is not a number. Please, try again.`)
   }
-}
+  
+  if (squaresPerSide > 100) {
+    return alert(`The chosen value is not under 100. Please, try again.`)
+  }
+
+  console.log('aaa')
+  let size = 500/squaresPerSide;
+
+  for(let i = 0; i < squaresPerSide; i++) {
+    const line = document.createElement("div");
+    line.style = "display: flex; justify-content: center";
+    mainContainer.appendChild(line);
+
+    for(let i = 0; i < squaresPerSide; i++) {
+      const square = document.createElement("div");
+      square.classList.add("square");
+      square.style = `height: ${size}px; width: ${size}px`;
+      square.onmouseover = () => square.classList.add("colored-square");
+      line.appendChild(square);
+    };
+  };
+});
