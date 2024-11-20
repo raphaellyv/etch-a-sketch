@@ -1,10 +1,26 @@
 body {
   padding: 20px;
   background-color: black;
+  text-align: center;
+}
+
+#title-container {
+  display: flex;
+  align-items: center;
+}
+
+#new-grid-button {
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+#new-grid-button i {
+  font-size: 30px;
 }
 
 #main-container {
-  width: 960px;
+  width: 700px;
   height: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -13,6 +29,7 @@ body {
   align-items: center;
   background-color: red;
   border: solid;
+  border-width: 10px;
   border-color: brown;
   border-radius: 70px;
 }

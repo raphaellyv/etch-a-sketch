@@ -6,13 +6,16 @@
     <title>Etch-a-Sketch Project</title>
     <script src="script.js" defer></script>
     <link rel='stylesheet' href='styles.css'/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div id="main-container">
-      <img src="etch-a-sketch-title.png" alt="Etch-a-sketch title" id="title">
+      <div id="title-container">
+        <img src="etch-a-sketch-title.png" alt="Etch-a-sketch title" id="title">
+        <button id="new-grid-button"><i class="fa fa-play"></i></button>
+      </div>
       <div id="grid-container"></div>
     </div>
-    <button id="new-grid-button">Click here to start drawing!</button>
     
   </body>
 </html>
