@@ -1,11 +1,13 @@
 const newGridButton = document.querySelector("#new-grid-button");
 const mainContainer = document.querySelector('#main-container');
 
+alert("Aperte o play para começar o jogo!");
+
 newGridButton.addEventListener("click", () => {
-  let squaresPerSide = Number(prompt("Number of squares per side? (max: 100)"));
+  let squaresPerSide = Number(prompt("Quantos quadrados você quer em cada lado? Digite um número entre 1 e 100."));
 
   if (isNaN(squaresPerSide) || squaresPerSide > 100 || squaresPerSide <= 0) {
-    return alert(`The chosen value is not a valid number. Please, try again.`);
+    return alert("Valor inválido. Por favor, tente novamente.");
   };
 
   const previousGridContainer = document.querySelector("#grid-container");
