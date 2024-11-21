@@ -29,6 +29,7 @@ newGridButton.addEventListener("click", () => {
       square.classList.add("square");
       square.style = `height: ${squareSize}px; width: ${squareSize}px`;
       square.onmouseover = () => square.classList.add("colored-square");
+      square.ontouchmove = () => square.classList.add("colored-square");
       line.appendChild(square);
     };
   };

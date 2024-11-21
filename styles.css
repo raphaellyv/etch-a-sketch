@@ -17,6 +17,7 @@ body {
   border-style: solid;
   border-width: 4px;
   border-color: brown;
+  cursor: pointer;
 }
 
 #new-grid-button i {
