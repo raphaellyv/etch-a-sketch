@@ -26,10 +26,13 @@ newGridButton.addEventListener("click", () => {
 
     for(let i = 0; i < squaresPerSide; i++) {
       const square = document.createElement("div");
+      function getRandomColor() {
+        return '#' + Math.floor(Math.random()*16777215).toString(16);
+      };
       square.classList.add("square");
       square.style = `height: ${squareSize}px; width: ${squareSize}px`;
-      square.onmouseover = () => square.classList.add("colored-square");
-      square.ontouchstart = () => square.classList.add("colored-square");
+      square.onmouseover = () => square.style.backgroundColor = getRandomColor();
+      square.ontouchstart = () => square.style.backgroundColor = getRandomColor();
       line.appendChild(square);
     };
   };
