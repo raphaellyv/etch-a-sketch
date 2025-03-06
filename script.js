@@ -24,15 +24,23 @@ newGridButton.addEventListener("click", () => {
     line.classList.add("line")
     gridContainer.appendChild(line);
 
+    var opacity = 0;
+
     for(let i = 0; i < squaresPerSide; i++) {
       const square = document.createElement("div");
+      
       function getRandomColor() {
         return '#' + Math.floor(Math.random()*16777215).toString(16);
       };
+      function styleSquare() {
+        opacity < 1 ? opacity += 0.1 : opacity = 1;
+        square.style.backgroundColor = getRandomColor();
+        square.style.opacity = opacity;
+      };
       square.classList.add("square");
       square.style = `height: ${squareSize}px; width: ${squareSize}px`;
-      square.onmouseover = () => square.style.backgroundColor = getRandomColor();
-      square.ontouchstart = () => square.style.backgroundColor = getRandomColor();
+      square.onmouseover = () => styleSquare();
+      square.ontouchstart = () => styleSquare();
       line.appendChild(square);
     };
   };
